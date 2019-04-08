@@ -1,0 +1,48 @@
+{
+    "private": true,
+    "scripts": {
+        "cleanup": "rimraf public/css public/fonts public/images public/js public/mix-manifest.json",
+        "predevelopment": "npm run cleanup",
+        "preproduction": "npm run cleanup",
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "cross-env": "^5.1.4",
+        "jquery": "^3.2",
+        "laravel-mix": "^2.1.11",
+        "lodash": "^4.17.5"
+    },
+    "dependencies": {
+        "ace-code-editor": "^1.2.3",
+        "alertifyjs": "^1.11.0",
+        "amcharts3": "^3.21.13",
+        "axios": "^0.18.0",
+        "badger-accordion": "^1.0.24",
+        "bootstrap": "^4.0.0",
+        "bootstrap-table": "^1.12.1",
+        "choices.js": "^3.0.4",
+        "flatpickr": "^4.4.6",
+        "font-awesome": "^4.7.0",
+        "formstone": "^1.4.4",
+        "jquery-form": "^4.2.2",
+        "jquery-ui": "^1.12.1",
+        "jquery.fancytree": "^2.28.1",
+        "jquery.tabbable": "^1.0.1",
+        "js-cookie": "^2.2.0",
+        "moment": "^2.21.0",
+        "notyf": "^2.0.1",
+        "parsleyjs": "^2.8.1",
+        "popper.js": "^1.14.1",
+        "rimraf": "^2.6.2",
+        "tag-it": "^2.0.0",
+        "template7": "^1.3.5",
+        "vanilla-masker": "^1.2.0",
+        "webui-popover": "^1.2.18"
+    }
+}
